@@ -28,7 +28,8 @@ function simulation(num_seconds, pages_per_minute) {
         }
 
         //Check if the printer is not busy and the list of task to be printed is not empty.
-        //In that case, the task at the first position will be removed, the time it took to be completed will be added to the array of times records and the printer will be advised to continue with the next task.
+        //In that case, the task at the first position will be removed, the time it took to be completed will be added to the array
+        //of times records and the printer will be advised to continue with the next task.
         if (!lab_printer.busy() && !print_queue.is_empty()) {
             next_task = print_queue.dequeue();
             waiting_times.push(next_task.wait_time(currentSecond));
@@ -39,7 +40,8 @@ function simulation(num_seconds, pages_per_minute) {
         lab_printer.tick()
     }
 
-    //Calculate the average time of a task to be completed by adding all the times of all tasks and dividing it by the number of tasks completed.
+    //Calculate the average time of a task to be completed by adding all the times of all tasks and dividing it by the number of 
+    //tasks completed.
     let average_wait = sum(waiting_times) / waiting_times.length;
     console.log("Average Wait %6.2f secs %d tasks remaining." % (average_wait, print_queue.size()));
 }
