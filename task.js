@@ -3,7 +3,8 @@ const random = Math.floor(Math.random() * 20) + 1;
 
 class Task {
 
-    //Constructor method executed when creating an instance object of Task. Receives the time as parameter which, which corresponds to the second in which the task was created 
+    //Constructor method executed when creating an instance object of Task. Receives the time as parameter which, 
+    //which corresponds to the second in which the task was created 
     constructor(time) {
 
         //Property to represent the actual second in which the task was created.
